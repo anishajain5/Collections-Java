@@ -1,0 +1,24 @@
+public static void nthprime(int n) {
+		int max_value=100;
+		 ArrayList<Integer> nth= new ArrayList<Integer>();
+		if(n==1) {
+			System.out.println("2");
+			return;
+		}
+		
+			for(int i=3;i<max_value;i++) {
+				int flag=0;
+				for(int j=2;j<i;j++) {
+					if(i%j==0) {
+						flag=1;
+						break;
+					}
+					}
+				if(flag==0) {
+					nth.add(i);
+					
+				}	
+			}
+			System.out.println(nth.get(n-1));
+			
+		}
